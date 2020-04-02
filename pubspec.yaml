@@ -26,6 +26,7 @@ dependencies:
   http: ^0.12.0
   logger: ^0.8.3
   connectivity: ^0.3.2
+  floating_search_bar: ^0.3.0
 
 dev_dependencies:
   flutter_test:

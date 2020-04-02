@@ -34,7 +34,7 @@ class _ListDataState extends State<ListData> {
     widget.Data.forEach((item) {
       if (item.location.toLowerCase().contains(text.toLowerCase())) {
         _searchResult.add(item);
-        log.e(_searchResult.length);
+
       }
     });
 
@@ -58,13 +58,16 @@ class _ListDataState extends State<ListData> {
               child: Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Card(
+
                   child: ListTile(
                     leading: Icon(Icons.search),
                     title: TextField(
                       controller: controller,
                       decoration: InputDecoration(
                           hintText: 'Search', border: InputBorder.none),
-                      onChanged: onSearchTextChanged,
+                      onChanged: (text){
+
+                      },
                     ),
                     trailing: IconButton(icon:  Icon(Icons.cancel), onPressed: () {
                       controller.clear();

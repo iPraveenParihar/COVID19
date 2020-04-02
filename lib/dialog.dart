@@ -11,28 +11,30 @@ class DisplayMessage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Container(
+        Padding(
+          padding: EdgeInsets.all(16),
           child: Card(
-            color: dead_indicate,
+            elevation: 8,
+            color: Colors.white,
             child: Column(
               children: <Widget>[
                 ListTile(
                   title: Padding(
                     padding: EdgeInsets.only(top: 8),
-                    child: Text("Connection Error", style: TextStyle(color: Colors.white, fontSize: 18),)
+                    child: Text("Connection Error", style: TextStyle(color: Colors.red, fontSize: 18,),)
                     ,
                   ),
                   subtitle: Padding(
                     padding: EdgeInsets.symmetric(vertical: 12),
-                    child: Text("Unable to connect with the internet. Check your internet connection and try again", style: TextStyle(color: Colors.white, fontSize: 16),),
+                    child: Text("Unable to connect with the internet. Check your internet connection and try again", style: TextStyle(color: Colors.black, fontSize: 16),),
                   ),
                 ),
                 ButtonBar(
                   children: <Widget>[
                     FlatButton(
-                      child: Text('OK', style: TextStyle(color: Colors.white, fontSize: 16),),
+                      child: Text('Try again', style: TextStyle(color: Colors.blue, fontSize: 16),),
                       onPressed: (){
-
+                        Navigator.pop(context);
                       },
                     )
                   ],
